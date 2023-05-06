@@ -5,7 +5,7 @@ report 60206 HasilProduksi
     ApplicationArea = All;
     DefaultLayout = RDLC;
     RDLCLayout = './Rdlc/HasilProduksi.rdl';
-
+    // tes comment
     dataset
     {
         dataitem("Invt. Receipt Header"; "Invt. Receipt Header")
