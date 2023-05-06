@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Assigned_User_ID">
+          <DataField>Assigned_User_ID</DataField>
+        </Field>
+        <Field Name="Assignment_Date">
+          <DataField>Assignment_Date</DataField>
+        </Field>
+        <Field Name="Assignment_Time">
+          <DataField>Assignment_Time</DataField>
+        </Field>
+        <Field Name="Sorting_Method">
+          <DataField>Sorting_Method</DataField>
+        </Field>
+        <Field Name="No__Series">
+          <DataField>No__Series</DataField>
+        </Field>
+        <Field Name="Zone_Code">
+          <DataField>Zone_Code</DataField>
+        </Field>
+        <Field Name="Bin_Code">
+          <DataField>Bin_Code</DataField>
+        </Field>
+        <Field Name="Document_Status">
+          <DataField>Document_Status</DataField>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Vendor_Shipment_No_">
+          <DataField>Vendor_Shipment_No_</DataField>
+        </Field>
+        <Field Name="Cross_Dock_Zone_Code">
+          <DataField>Cross_Dock_Zone_Code</DataField>
+        </Field>
+        <Field Name="Cross_Dock_Bin_Code">
+          <DataField>Cross_Dock_Bin_Code</DataField>
+        </Field>
+        <Field Name="Create_Posted_Header">
+          <DataField>Create_Posted_Header</DataField>
+        </Field>
+        <Field Name="Receiving_No_">
+          <DataField>Receiving_No_</DataField>
+        </Field>
+        <Field Name="Last_Receiving_No_">
+          <DataField>Last_Receiving_No_</DataField>
+        </Field>
+        <Field Name="Receiving_No__Series">
+          <DataField>Receiving_No__Series</DataField>
+        </Field>
+        <Field Name="Line_No_">
+          <DataField>Line_No_</DataField>
+        </Field>
+        <Field Name="Source_Type">
+          <DataField>Source_Type</DataField>
+        </Field>
+        <Field Name="Source_Subtype">
+          <DataField>Source_Subtype</DataField>
+        </Field>
+        <Field Name="Source_No_">
+          <DataField>Source_No_</DataField>
+        </Field>
+        <Field Name="Source_Line_No_">
+          <DataField>Source_Line_No_</DataField>
+        </Field>
+        <Field Name="Source_Document">
+          <DataField>Source_Document</DataField>
+        </Field>
+        <Field Name="Shelf_No_">
+          <DataField>Shelf_No_</DataField>
+        </Field>
+        <Field Name="Item_No_">
+          <DataField>Item_No_</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Qty___Base_">
+          <DataField>Qty___Base_</DataField>
+        </Field>
+        <Field Name="Qty___Base_Format">
+          <DataField>Qty___Base_Format</DataField>
+        </Field>
+        <Field Name="Qty__Outstanding">
+          <DataField>Qty__Outstanding</DataField>
+        </Field>
+        <Field Name="Qty__OutstandingFormat">
+          <DataField>Qty__OutstandingFormat</DataField>
+        </Field>
+        <Field Name="Qty__Outstanding__Base_">
+          <DataField>Qty__Outstanding__Base_</DataField>
+        </Field>
+        <Field Name="Qty__Outstanding__Base_Format">
+          <DataField>Qty__Outstanding__Base_Format</DataField>
+        </Field>
+        <Field Name="Qty__to_Receive">
+          <DataField>Qty__to_Receive</DataField>
+        </Field>
+        <Field Name="Qty__to_ReceiveFormat">
+          <DataField>Qty__to_ReceiveFormat</DataField>
+        </Field>
+        <Field Name="Qty__to_Receive__Base_">
+          <DataField>Qty__to_Receive__Base_</DataField>
+        </Field>
+        <Field Name="Qty__to_Receive__Base_Format">
+          <DataField>Qty__to_Receive__Base_Format</DataField>
+        </Field>
+        <Field Name="Qty__Received">
+          <DataField>Qty__Received</DataField>
+        </Field>
+        <Field Name="Qty__ReceivedFormat">
+          <DataField>Qty__ReceivedFormat</DataField>
+        </Field>
+        <Field Name="Qty__Received__Base_">
+          <DataField>Qty__Received__Base_</DataField>
+        </Field>
+        <Field Name="Qty__Received__Base_Format">
+          <DataField>Qty__Received__Base_Format</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_Code">
+          <DataField>Unit_of_Measure_Code</DataField>
+        </Field>
+        <Field Name="Qty__per_Unit_of_Measure">
+          <DataField>Qty__per_Unit_of_Measure</DataField>
+        </Field>
+        <Field Name="Qty__per_Unit_of_MeasureFormat">
+          <DataField>Qty__per_Unit_of_MeasureFormat</DataField>
+        </Field>
+        <Field Name="Variant_Code">
+          <DataField>Variant_Code</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Due_Date">
+          <DataField>Due_Date</DataField>
+        </Field>
+        <Field Name="Starting_Date">
+          <DataField>Starting_Date</DataField>
+        </Field>
+        <Field Name="Weight">
+          <DataField>Weight</DataField>
+        </Field>
+        <Field Name="WeightFormat">
+          <DataField>WeightFormat</DataField>
+        </Field>
+        <Field Name="Qty__Rounding_Precision">
+          <DataField>Qty__Rounding_Precision</DataField>
+        </Field>
+        <Field Name="Qty__Rounding_PrecisionFormat">
+          <DataField>Qty__Rounding_PrecisionFormat</DataField>
+        </Field>
+        <Field Name="Qty__Rounding_Precision__Base_">
+          <DataField>Qty__Rounding_Precision__Base_</DataField>
+        </Field>
+        <Field Name="Qty__Rounding_Precision__Base_Format">
+          <DataField>Qty__Rounding_Precision__Base_Format</DataField>
+        </Field>
+        <Field Name="Over_Receipt_Quantity">
+          <DataField>Over_Receipt_Quantity</DataField>
+        </Field>
+        <Field Name="Over_Receipt_QuantityFormat">
+          <DataField>Over_Receipt_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Over_Receipt_Code">
+          <DataField>Over_Receipt_Code</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

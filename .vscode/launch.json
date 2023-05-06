@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Sandbox",
+            "request": "launch",
+            "type": "al",
+            "server": "businesscentral.dynamics.com/",
+            "tenant": "5f138de3-8774-4114-8fc4-1a93dfc31a3a",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox02042023",
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true
+        }
+    ]
+}

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Entry_Type">
+          <DataField>Entry_Type</DataField>
+        </Field>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="Document_No_">
+          <DataField>Document_No_</DataField>
+        </Field>
+        <Field Name="Item_No_">
+          <DataField>Item_No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Global_Dimension_1_Code">
+          <DataField>Global_Dimension_1_Code</DataField>
+        </Field>
+        <Field Name="Global_Dimension_2_Code">
+          <DataField>Global_Dimension_2_Code</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Invoiced_Quantity">
+          <DataField>Invoiced_Quantity</DataField>
+        </Field>
+        <Field Name="Invoiced_QuantityFormat">
+          <DataField>Invoiced_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Remaining_Quantity">
+          <DataField>Remaining_Quantity</DataField>
+        </Field>
+        <Field Name="Remaining_QuantityFormat">
+          <DataField>Remaining_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Sales_Amount__Actual_">
+          <DataField>Sales_Amount__Actual_</DataField>
+        </Field>
+        <Field Name="Sales_Amount__Actual_Format">
+          <DataField>Sales_Amount__Actual_Format</DataField>
+        </Field>
+        <Field Name="Cost_Amount__Actual_">
+          <DataField>Cost_Amount__Actual_</DataField>
+        </Field>
+        <Field Name="Cost_Amount__Actual_Format">
+          <DataField>Cost_Amount__Actual_Format</DataField>
+        </Field>
+        <Field Name="Cost_Amount__Non_Invtbl__">
+          <DataField>Cost_Amount__Non_Invtbl__</DataField>
+        </Field>
+        <Field Name="Cost_Amount__Non_Invtbl__Format">
+          <DataField>Cost_Amount__Non_Invtbl__Format</DataField>
+        </Field>
+        <Field Name="Open">
+          <DataField>Open</DataField>
+        </Field>
+        <Field Name="Order_Type">
+          <DataField>Order_Type</DataField>
+        </Field>
+        <Field Name="Entry_No_">
+          <DataField>Entry_No_</DataField>
+        </Field>
+        <Field Name="Document_Date">
+          <DataField>Document_Date</DataField>
+        </Field>
+        <Field Name="Document_Line_No_">
+          <DataField>Document_Line_No_</DataField>
+        </Field>
+        <Field Name="Country_Region_Code">
+          <DataField>Country_Region_Code</DataField>
+        </Field>
+        <Field Name="Area">
+          <DataField>Area</DataField>
+        </Field>
+        <Field Name="Lot_No_">
+          <DataField>Lot_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

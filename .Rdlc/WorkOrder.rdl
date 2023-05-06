@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="Asset_No_">
+          <DataField>Asset_No_</DataField>
+        </Field>
+        <Field Name="Asset_Description">
+          <DataField>Asset_Description</DataField>
+        </Field>
+        <Field Name="Category_Code">
+          <DataField>Category_Code</DataField>
+        </Field>
+        <Field Name="Priority_Code">
+          <DataField>Priority_Code</DataField>
+        </Field>
+        <Field Name="Priority_Description">
+          <DataField>Priority_Description</DataField>
+        </Field>
+        <Field Name="Next_Planned_Date">
+          <DataField>Next_Planned_Date</DataField>
+        </Field>
+        <Field Name="Last_Done_Date">
+          <DataField>Last_Done_Date</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="No__Series">
+          <DataField>No__Series</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="Plan_No_">
+          <DataField>Plan_No_</DataField>
+        </Field>
+        <Field Name="Frequency_Type">
+          <DataField>Frequency_Type</DataField>
+        </Field>
+        <Field Name="Frequency_Line_No_">
+          <DataField>Frequency_Line_No_</DataField>
+        </Field>
+        <Field Name="Frequency_Description">
+          <DataField>Frequency_Description</DataField>
+        </Field>
+        <Field Name="Actual_Next_Planned_Date">
+          <DataField>Actual_Next_Planned_Date</DataField>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Posting_Option">
+          <DataField>Posting_Option</DataField>
+        </Field>
+        <Field Name="Usage">
+          <DataField>Usage</DataField>
+        </Field>
+        <Field Name="Close">
+          <DataField>Close</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Latest_Finish_Date">
+          <DataField>Latest_Finish_Date</DataField>
+        </Field>
+        <Field Name="Waiting_Reason_Description">
+          <DataField>Waiting_Reason_Description</DataField>
+        </Field>
+        <Field Name="Waiting_Reasons_Exist">
+          <DataField>Waiting_Reasons_Exist</DataField>
+        </Field>
+        <Field Name="Corrective_Maintenance">
+          <DataField>Corrective_Maintenance</DataField>
+        </Field>
+        <Field Name="Downtime_Entry_No_">
+          <DataField>Downtime_Entry_No_</DataField>
+        </Field>
+        <Field Name="Bill_to_Customer_No_">
+          <DataField>Bill_to_Customer_No_</DataField>
+        </Field>
+        <Field Name="Before_Work_Checklist_Status">
+          <DataField>Before_Work_Checklist_Status</DataField>
+        </Field>
+        <Field Name="During_Work_Checklist_Status">
+          <DataField>During_Work_Checklist_Status</DataField>
+        </Field>
+        <Field Name="After_Work_Checklist_Status">
+          <DataField>After_Work_Checklist_Status</DataField>
+        </Field>
+        <Field Name="Warranty_No_">
+          <DataField>Warranty_No_</DataField>
+        </Field>
+        <Field Name="Claim_No_">
+          <DataField>Claim_No_</DataField>
+        </Field>
+        <Field Name="Instructions">
+          <DataField>Instructions</DataField>
+        </Field>
+        <Field Name="Created_By">
+          <DataField>Created_By</DataField>
+        </Field>
+        <Field Name="Created_At">
+          <DataField>Created_At</DataField>
+        </Field>
+        <Field Name="Created_Manually">
+          <DataField>Created_Manually</DataField>
+        </Field>
+        <Field Name="Maintenance_Request_No_">
+          <DataField>Maintenance_Request_No_</DataField>
+        </Field>
+        <Field Name="Document_No_">
+          <DataField>Document_No_</DataField>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Qty__to_Consume">
+          <DataField>Qty__to_Consume</DataField>
+        </Field>
+        <Field Name="Qty__to_ConsumeFormat">
+          <DataField>Qty__to_ConsumeFormat</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_Code">
+          <DataField>Unit_of_Measure_Code</DataField>
+        </Field>
+        <Field Name="Qty__Consumed">
+          <DataField>Qty__Consumed</DataField>
+        </Field>
+        <Field Name="Qty__ConsumedFormat">
+          <DataField>Qty__ConsumedFormat</DataField>
+        </Field>
+        <Field Name="Shortcut_Dimension_1_Code">
+          <DataField>Shortcut_Dimension_1_Code</DataField>
+        </Field>
+        <Field Name="Shortcut_Dimension_2_Code">
+          <DataField>Shortcut_Dimension_2_Code</DataField>
+        </Field>
+        <Field Name="Expected_Unit_Cost__LCY_">
+          <DataField>Expected_Unit_Cost__LCY_</DataField>
+        </Field>
+        <Field Name="Expected_Unit_Cost__LCY_Format">
+          <DataField>Expected_Unit_Cost__LCY_Format</DataField>
+        </Field>
+        <Field Name="Expected_Line_Cost__LCY_">
+          <DataField>Expected_Line_Cost__LCY_</DataField>
+        </Field>
+        <Field Name="Expected_Line_Cost__LCY_Format">
+          <DataField>Expected_Line_Cost__LCY_Format</DataField>
+        </Field>
+        <Field Name="Outstanding_Quantity">
+          <DataField>Outstanding_Quantity</DataField>
+        </Field>
+        <Field Name="Outstanding_QuantityFormat">
+          <DataField>Outstanding_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Gen__Bus__Posting_Group">
+          <DataField>Gen__Bus__Posting_Group</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

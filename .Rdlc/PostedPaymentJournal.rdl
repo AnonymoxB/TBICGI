@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Journal_Template_Name">
+          <DataField>Journal_Template_Name</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="No__Series">
+          <DataField>No__Series</DataField>
+        </Field>
+        <Field Name="Posting_No__Series">
+          <DataField>Posting_No__Series</DataField>
+        </Field>
+        <Field Name="Suggest_Balancing_Amount">
+          <DataField>Suggest_Balancing_Amount</DataField>
+        </Field>
+        <Field Name="Line_No_">
+          <DataField>Line_No_</DataField>
+        </Field>
+        <Field Name="Account_Type">
+          <DataField>Account_Type</DataField>
+        </Field>
+        <Field Name="Account_No_">
+          <DataField>Account_No_</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="Document_No_">
+          <DataField>Document_No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="VAT__">
+          <DataField>VAT__</DataField>
+        </Field>
+        <Field Name="VAT__Format">
+          <DataField>VAT__Format</DataField>
+        </Field>
+        <Field Name="Currency_Code">
+          <DataField>Currency_Code</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="Debit_Amount">
+          <DataField>Debit_Amount</DataField>
+        </Field>
+        <Field Name="Debit_AmountFormat">
+          <DataField>Debit_AmountFormat</DataField>
+        </Field>
+        <Field Name="Credit_Amount">
+          <DataField>Credit_Amount</DataField>
+        </Field>
+        <Field Name="Credit_AmountFormat">
+          <DataField>Credit_AmountFormat</DataField>
+        </Field>
+        <Field Name="Amount__LCY_">
+          <DataField>Amount__LCY_</DataField>
+        </Field>
+        <Field Name="Amount__LCY_Format">
+          <DataField>Amount__LCY_Format</DataField>
+        </Field>
+        <Field Name="Balance__LCY_">
+          <DataField>Balance__LCY_</DataField>
+        </Field>
+        <Field Name="Balance__LCY_Format">
+          <DataField>Balance__LCY_Format</DataField>
+        </Field>
+        <Field Name="Currency_Factor">
+          <DataField>Currency_Factor</DataField>
+        </Field>
+        <Field Name="Currency_FactorFormat">
+          <DataField>Currency_FactorFormat</DataField>
+        </Field>
+        <Field Name="Sales_Purch___LCY_">
+          <DataField>Sales_Purch___LCY_</DataField>
+        </Field>
+        <Field Name="Sales_Purch___LCY_Format">
+          <DataField>Sales_Purch___LCY_Format</DataField>
+        </Field>
+        <Field Name="Profit__LCY_">
+          <DataField>Profit__LCY_</DataField>
+        </Field>
+        <Field Name="Profit__LCY_Format">
+          <DataField>Profit__LCY_Format</DataField>
+        </Field>
+        <Field Name="Inv__Discount__LCY_">
+          <DataField>Inv__Discount__LCY_</DataField>
+        </Field>
+        <Field Name="Inv__Discount__LCY_Format">
+          <DataField>Inv__Discount__LCY_Format</DataField>
+        </Field>
+        <Field Name="Bill_to_Pay_to_No_">
+          <DataField>Bill_to_Pay_to_No_</DataField>
+        </Field>
+        <Field Name="Posting_Group">
+          <DataField>Posting_Group</DataField>
+        </Field>
+        <Field Name="Shortcut_Dimension_1_Code">
+          <DataField>Shortcut_Dimension_1_Code</DataField>
+        </Field>
+        <Field Name="Shortcut_Dimension_2_Code">
+          <DataField>Shortcut_Dimension_2_Code</DataField>
+        </Field>
+        <Field Name="Salespers__Purch__Code">
+          <DataField>Salespers__Purch__Code</DataField>
+        </Field>
+        <Field Name="Source_Code">
+          <DataField>Source_Code</DataField>
+        </Field>
+        <Field Name="System_Created_Entry">
+          <DataField>System_Created_Entry</DataField>
+        </Field>
+        <Field Name="Applies_to_Doc__Type">
+          <DataField>Applies_to_Doc__Type</DataField>
+        </Field>
+        <Field Name="Applies_to_Doc__No_">
+          <DataField>Applies_to_Doc__No_</DataField>
+        </Field>
+        <Field Name="Due_Date">
+          <DataField>Due_Date</DataField>
+        </Field>
+        <Field Name="Document_Date">
+          <DataField>Document_Date</DataField>
+        </Field>
+        <Field Name="Payment_Discount__">
+          <DataField>Payment_Discount__</DataField>
+        </Field>
+        <Field Name="Payment_Discount__Format">
+          <DataField>Payment_Discount__Format</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="VAT_Amount">
+          <DataField>VAT_Amount</DataField>
+        </Field>
+        <Field Name="VAT_AmountFormat">
+          <DataField>VAT_AmountFormat</DataField>
+        </Field>
+        <Field Name="VAT_Posting">
+          <DataField>VAT_Posting</DataField>
+        </Field>
+        <Field Name="Payment_Terms_Code">
+          <DataField>Payment_Terms_Code</DataField>
+        </Field>
+        <Field Name="Applies_to_ID">
+          <DataField>Applies_to_ID</DataField>
+        </Field>
+        <Field Name="Business_Unit_Code">
+          <DataField>Business_Unit_Code</DataField>
+        </Field>
+        <Field Name="Gen__Bus__Posting_Group">
+          <DataField>Gen__Bus__Posting_Group</DataField>
+        </Field>
+        <Field Name="Gen__Prod__Posting_Group">
+          <DataField>Gen__Prod__Posting_Group</DataField>
+        </Field>
+        <Field Name="Source_Currency_Code">
+          <DataField>Source_Currency_Code</DataField>
+        </Field>
+        <Field Name="Reversing_Entry">
+          <DataField>Reversing_Entry</DataField>
+        </Field>
+        <Field Name="G_L_Register_No_">
+          <DataField>G_L_Register_No_</DataField>
+        </Field>
+        <Field Name="Bal__Account_Type">
+          <DataField>Bal__Account_Type</DataField>
+        </Field>
+        <Field Name="Bal__Account_No_">
+          <DataField>Bal__Account_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

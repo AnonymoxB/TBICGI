@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Asset_No_">
+          <DataField>Asset_No_</DataField>
+        </Field>
+        <Field Name="Work_Order_No_">
+          <DataField>Work_Order_No_</DataField>
+        </Field>
+        <Field Name="Plan_No_">
+          <DataField>Plan_No_</DataField>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_Code">
+          <DataField>Unit_of_Measure_Code</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Work_Type_Code">
+          <DataField>Work_Type_Code</DataField>
+        </Field>
+        <Field Name="Serial_No_">
+          <DataField>Serial_No_</DataField>
+        </Field>
+        <Field Name="Lot_No_">
+          <DataField>Lot_No_</DataField>
+        </Field>
+        <Field Name="Vendor_No_">
+          <DataField>Vendor_No_</DataField>
+        </Field>
+        <Field Name="Expected_Unit_Cost__LCY_">
+          <DataField>Expected_Unit_Cost__LCY_</DataField>
+        </Field>
+        <Field Name="Expected_Unit_Cost__LCY_Format">
+          <DataField>Expected_Unit_Cost__LCY_Format</DataField>
+        </Field>
+        <Field Name="Expected_Line_Cost__LCY_">
+          <DataField>Expected_Line_Cost__LCY_</DataField>
+        </Field>
+        <Field Name="Expected_Line_Cost__LCY_Format">
+          <DataField>Expected_Line_Cost__LCY_Format</DataField>
+        </Field>
+        <Field Name="Expense_Open">
+          <DataField>Expense_Open</DataField>
+        </Field>
+        <Field Name="Actual_Line_Cost__LCY_">
+          <DataField>Actual_Line_Cost__LCY_</DataField>
+        </Field>
+        <Field Name="Actual_Line_Cost__LCY_Format">
+          <DataField>Actual_Line_Cost__LCY_Format</DataField>
+        </Field>
+        <Field Name="Entry_No_">
+          <DataField>Entry_No_</DataField>
+        </Field>
+        <Field Name="Direct_FA_Cost">
+          <DataField>Direct_FA_Cost</DataField>
+        </Field>
+        <Field Name="Skills">
+          <DataField>Skills</DataField>
+        </Field>
+        <Field Name="Missing_Skills">
+          <DataField>Missing_Skills</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

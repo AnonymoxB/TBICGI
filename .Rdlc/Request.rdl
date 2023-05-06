@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Request_Type">
+          <DataField>Request_Type</DataField>
+        </Field>
+        <Field Name="Priority_Code">
+          <DataField>Priority_Code</DataField>
+        </Field>
+        <Field Name="Request_Date">
+          <DataField>Request_Date</DataField>
+        </Field>
+        <Field Name="Remarks">
+          <DataField>Remarks</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="Asset_No_">
+          <DataField>Asset_No_</DataField>
+        </Field>
+        <Field Name="Maint__Req__Group_Code">
+          <DataField>Maint__Req__Group_Code</DataField>
+        </Field>
+        <Field Name="Asset_Description">
+          <DataField>Asset_Description</DataField>
+        </Field>
+        <Field Name="No__Series">
+          <DataField>No__Series</DataField>
+        </Field>
+        <Field Name="Create_By">
+          <DataField>Create_By</DataField>
+        </Field>
+        <Field Name="Closed">
+          <DataField>Closed</DataField>
+        </Field>
+        <Field Name="Assigned_To">
+          <DataField>Assigned_To</DataField>
+        </Field>
+        <Field Name="Last_Modified_DateTime">
+          <DataField>Last_Modified_DateTime</DataField>
+        </Field>
+        <Field Name="Status_Description">
+          <DataField>Status_Description</DataField>
+        </Field>
+        <Field Name="Closed_Date_Time">
+          <DataField>Closed_Date_Time</DataField>
+        </Field>
+        <Field Name="Closed_By">
+          <DataField>Closed_By</DataField>
+        </Field>
+        <Field Name="Request_Duration">
+          <DataField>Request_Duration</DataField>
+        </Field>
+        <Field Name="Closed_Date">
+          <DataField>Closed_Date</DataField>
+        </Field>
+        <Field Name="Related_To_Type">
+          <DataField>Related_To_Type</DataField>
+        </Field>
+        <Field Name="Related_To_No_">
+          <DataField>Related_To_No_</DataField>
+        </Field>
+        <Field Name="Group_Description">
+          <DataField>Group_Description</DataField>
+        </Field>
+        <Field Name="Request_No_">
+          <DataField>Request_No_</DataField>
+        </Field>
+        <Field Name="Line_No_">
+          <DataField>Line_No_</DataField>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+        </Field>
+        <Field Name="Commented_By">
+          <DataField>Commented_By</DataField>
+        </Field>
+        <Field Name="Entry_No_">
+          <DataField>Entry_No_</DataField>
+        </Field>
+        <Field Name="Plan_No_">
+          <DataField>Plan_No_</DataField>
+        </Field>
+        <Field Name="Frequency_Type">
+          <DataField>Frequency_Type</DataField>
+        </Field>
+        <Field Name="Plan_Date">
+          <DataField>Plan_Date</DataField>
+        </Field>
+        <Field Name="Order_Date">
+          <DataField>Order_Date</DataField>
+        </Field>
+        <Field Name="Work_Order_No_">
+          <DataField>Work_Order_No_</DataField>
+        </Field>
+        <Field Name="Work_Order_Downtime_Entry_No_">
+          <DataField>Work_Order_Downtime_Entry_No_</DataField>
+        </Field>
+        <Field Name="Plan_Downtime_Entry_No_">
+          <DataField>Plan_Downtime_Entry_No_</DataField>
+        </Field>
+        <Field Name="Plan_Maint__Req__No_">
+          <DataField>Plan_Maint__Req__No_</DataField>
+        </Field>
+        <Field Name="Work_Order_Maint__Req__No_">
+          <DataField>Work_Order_Maint__Req__No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

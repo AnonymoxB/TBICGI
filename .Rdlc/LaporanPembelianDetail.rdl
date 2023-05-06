@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="Buy_from_Vendor_No_">
+          <DataField>Buy_from_Vendor_No_</DataField>
+        </Field>
+        <Field Name="Pay_to_Vendor_No_">
+          <DataField>Pay_to_Vendor_No_</DataField>
+        </Field>
+        <Field Name="Pay_to_Name">
+          <DataField>Pay_to_Name</DataField>
+        </Field>
+        <Field Name="Pay_to_Contact">
+          <DataField>Pay_to_Contact</DataField>
+        </Field>
+        <Field Name="Pay_to_Address">
+          <DataField>Pay_to_Address</DataField>
+        </Field>
+        <Field Name="Pay_to_City">
+          <DataField>Pay_to_City</DataField>
+        </Field>
+        <Field Name="Order_Date">
+          <DataField>Order_Date</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Vendor_Invoice_No_">
+          <DataField>Vendor_Invoice_No_</DataField>
+        </Field>
+        <Field Name="Vendor_Shipment_No_">
+          <DataField>Vendor_Shipment_No_</DataField>
+        </Field>
+        <Field Name="Buy_from_Vendor_Name">
+          <DataField>Buy_from_Vendor_Name</DataField>
+        </Field>
+        <Field Name="Buy_from_Address">
+          <DataField>Buy_from_Address</DataField>
+        </Field>
+        <Field Name="Buy_from_Contact">
+          <DataField>Buy_from_Contact</DataField>
+        </Field>
+        <Field Name="Buy_from_Contact_No_">
+          <DataField>Buy_from_Contact_No_</DataField>
+        </Field>
+        <Field Name="Payment_Discount__">
+          <DataField>Payment_Discount__</DataField>
+        </Field>
+        <Field Name="Payment_Discount__Format">
+          <DataField>Payment_Discount__Format</DataField>
+        </Field>
+        <Field Name="Payment_Terms_Code">
+          <DataField>Payment_Terms_Code</DataField>
+        </Field>
+        <Field Name="Document_Date">
+          <DataField>Document_Date</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="Jml">
+          <DataField>Jml</DataField>
+        </Field>
+        <Field Name="JmlFormat">
+          <DataField>JmlFormat</DataField>
+        </Field>
+        <Field Name="Ship_to_Name">
+          <DataField>Ship_to_Name</DataField>
+        </Field>
+        <Field Name="Ship_to_Address">
+          <DataField>Ship_to_Address</DataField>
+        </Field>
+        <Field Name="Ship_to_Contact">
+          <DataField>Ship_to_Contact</DataField>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Document_No_">
+          <DataField>Document_No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Bin_Code">
+          <DataField>Bin_Code</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Outstanding_Quantity">
+          <DataField>Outstanding_Quantity</DataField>
+        </Field>
+        <Field Name="Outstanding_QuantityFormat">
+          <DataField>Outstanding_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Quantity_Received">
+          <DataField>Quantity_Received</DataField>
+        </Field>
+        <Field Name="Quantity_ReceivedFormat">
+          <DataField>Quantity_ReceivedFormat</DataField>
+        </Field>
+        <Field Name="Quantity_Invoiced">
+          <DataField>Quantity_Invoiced</DataField>
+        </Field>
+        <Field Name="Quantity_InvoicedFormat">
+          <DataField>Quantity_InvoicedFormat</DataField>
+        </Field>
+        <Field Name="Qty__to_Invoice">
+          <DataField>Qty__to_Invoice</DataField>
+        </Field>
+        <Field Name="Qty__to_InvoiceFormat">
+          <DataField>Qty__to_InvoiceFormat</DataField>
+        </Field>
+        <Field Name="Qty__to_Receive">
+          <DataField>Qty__to_Receive</DataField>
+        </Field>
+        <Field Name="Qty__to_ReceiveFormat">
+          <DataField>Qty__to_ReceiveFormat</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_Code">
+          <DataField>Unit_of_Measure_Code</DataField>
+        </Field>
+        <Field Name="Unit_Price__LCY_">
+          <DataField>Unit_Price__LCY_</DataField>
+        </Field>
+        <Field Name="Unit_Price__LCY_Format">
+          <DataField>Unit_Price__LCY_Format</DataField>
+        </Field>
+        <Field Name="Currency_Code">
+          <DataField>Currency_Code</DataField>
+        </Field>
+        <Field Name="Line_Discount__">
+          <DataField>Line_Discount__</DataField>
+        </Field>
+        <Field Name="Line_Discount__Format">
+          <DataField>Line_Discount__Format</DataField>
+        </Field>
+        <Field Name="Line_Discount_Amount">
+          <DataField>Line_Discount_Amount</DataField>
+        </Field>
+        <Field Name="Line_Discount_AmountFormat">
+          <DataField>Line_Discount_AmountFormat</DataField>
+        </Field>
+        <Field Name="Inv__Disc__Amount_to_Invoice">
+          <DataField>Inv__Disc__Amount_to_Invoice</DataField>
+        </Field>
+        <Field Name="Inv__Disc__Amount_to_InvoiceFormat">
+          <DataField>Inv__Disc__Amount_to_InvoiceFormat</DataField>
+        </Field>
+        <Field Name="Inv__Discount_Amount">
+          <DataField>Inv__Discount_Amount</DataField>
+        </Field>
+        <Field Name="Inv__Discount_AmountFormat">
+          <DataField>Inv__Discount_AmountFormat</DataField>
+        </Field>
+        <Field Name="Expected_Receipt_Date">
+          <DataField>Expected_Receipt_Date</DataField>
+        </Field>
+        <Field Name="Planned_Receipt_Date">
+          <DataField>Planned_Receipt_Date</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

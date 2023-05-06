@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Buy_from_Vendor_No_">
+          <DataField>Buy_from_Vendor_No_</DataField>
+        </Field>
+        <Field Name="Pay_to_Name">
+          <DataField>Pay_to_Name</DataField>
+        </Field>
+        <Field Name="Order_Date">
+          <DataField>Order_Date</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="StdTot">
+          <DataField>StdTot</DataField>
+        </Field>
+        <Field Name="StdTotFormat">
+          <DataField>StdTotFormat</DataField>
+        </Field>
+        <Field Name="MktTot">
+          <DataField>MktTot</DataField>
+        </Field>
+        <Field Name="MktTotFormat">
+          <DataField>MktTotFormat</DataField>
+        </Field>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="Document_No_">
+          <DataField>Document_No_</DataField>
+        </Field>
+        <Field Name="Line_No_">
+          <DataField>Line_No_</DataField>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Direct_Unit_Cost">
+          <DataField>Direct_Unit_Cost</DataField>
+        </Field>
+        <Field Name="Direct_Unit_CostFormat">
+          <DataField>Direct_Unit_CostFormat</DataField>
+        </Field>
+        <Field Name="Job_Unit_Price">
+          <DataField>Job_Unit_Price</DataField>
+        </Field>
+        <Field Name="Job_Unit_PriceFormat">
+          <DataField>Job_Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price_Temp">
+          <DataField>Unit_Price_Temp</DataField>
+        </Field>
+        <Field Name="Unit_Price_TempFormat">
+          <DataField>Unit_Price_TempFormat</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure">
+          <DataField>Unit_of_Measure</DataField>
+        </Field>
+        <Field Name="Gen__Bus__Posting_Group">
+          <DataField>Gen__Bus__Posting_Group</DataField>
+        </Field>
+        <Field Name="Gen__Prod__Posting_Group">
+          <DataField>Gen__Prod__Posting_Group</DataField>
+        </Field>
+        <Field Name="Transaction_Type">
+          <DataField>Transaction_Type</DataField>
+        </Field>
+        <Field Name="Selisih">
+          <DataField>Selisih</DataField>
+        </Field>
+        <Field Name="SelisihFormat">
+          <DataField>SelisihFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
