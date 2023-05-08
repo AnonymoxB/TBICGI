@@ -5,7 +5,7 @@ report 60511 LaporanUsageBarang
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/LaporanUsageBarang.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60511_UsageItem.rdl';
 
     dataset
     {

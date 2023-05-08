@@ -1,53 +1,57 @@
-report 60203 OrderOutput
+report 60202 OrderConsume
 {
     UsageCategory = ReportsAndAnalysis;
-    Caption = 'Order Output';
+    Caption = 'Order Consume';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/OrderOutput.rdl';
+
+    RDLCLayout = './Rdlc/Rdlc_60202_OrderConsume.rdl';
 
     dataset
     {
         dataitem("Invt. Document Header"; "Invt. Document Header")
         {
-            column(Document_Type; "Document Type")
+            column(No_; "No.")
             {
             }
-            column(No_; "No.")
-            { }
             column(Posting_Description; "Posting Description")
+            { }
+            column(Document_Type; "Document Type")
             { }
             column(Document_Date; "Document Date")
             { }
             column(Posting_Date; "Posting Date")
             { }
+            column(Location_Code; "Location Code")
+            { }
             column(Gen__Bus__Posting_Group; "Gen. Bus. Posting Group")
-            { }
-            column(Salesperson_Purchaser_Code; "Salesperson/Purchaser Code")
-            { }
-            column(External_Document_No_; "External Document No.")
-            { }
-            column(Correction; Correction)
-            { }
-            column(No__Series; "No. Series")
-            { }
-            column(Posting_No__Series; "Posting No. Series")
             { }
             column(Shortcut_Dimension_1_Code; "Shortcut Dimension 1 Code")
             { }
             column(Shortcut_Dimension_2_Code; "Shortcut Dimension 2 Code")
             { }
-            column(Dimension_Set_ID; "Dimension Set ID")
+            column(External_Document_No_; "External Document No.")
             { }
-            column(Location_Code; "Location Code")
+            column(Salesperson_Purchaser_Code; "Salesperson/Purchaser Code")
+            { }
+            column(Correction; Correction)
             { }
             column(Status; Status)
+            { }
+            column(No__Series; "No. Series")
+            { }
+            column(Posting_No__Series; "Posting No. Series")
+            { }
+            column(Dimension_Set_ID; "Dimension Set ID")
             { }
             column(CompanyPic; CompanyInfo.Picture)
             { }
             dataitem("Invt. Document Line"; "Invt. Document Line")
             {
                 DataItemLink = "Document No." = field("No.");
+
+                column(Document_No_; "Document No.")
+                { }
                 column(Line_No_; "Line No.")
                 { }
                 column(Item_No_; "Item No.")
@@ -56,31 +60,25 @@ report 60203 OrderOutput
                 { }
                 column(Quantity; Quantity)
                 { }
-                column(Unit_Amount; "Unit Amount")
-                { }
-                column(Indirect_Cost__; "Indirect Cost %")
+                column(Unit_of_Measure_Code; "Unit of Measure Code")
                 { }
                 column(Unit_Cost; "Unit Cost")
                 { }
-                column(Amount; Amount)
+                column(Unit_Amount; "Unit Amount")
                 { }
-                column(Unit_of_Measure_Code; "Unit of Measure Code")
+                column(Amount; Amount)
                 { }
                 column(Inventory_Posting_Group; "Inventory Posting Group")
                 { }
-                column(Applies_to_Entry; "Applies-to Entry")
+                column(Gen__Prod__Posting_Group; "Gen. Prod. Posting Group")
                 { }
                 column(Qty__per_Unit_of_Measure; "Qty. per Unit of Measure")
                 { }
-                column(Gen__Prod__Posting_Group; "Gen. Prod. Posting Group")
+                column(Qty__Rounding_Precision; "Qty. Rounding Precision")
                 { }
-                column(Variant_Code; "Variant Code")
+                column(Quantity__Base_; "Quantity (Base)")
                 { }
-                column(Gross_Weight; "Gross Weight")
-                { }
-                column(Net_Weight; "Net Weight")
-                { }
-                column(Units_per_Parcel; "Units per Parcel")
+                column(Purchasing_Code; "Purchasing Code")
                 { }
             }
         }

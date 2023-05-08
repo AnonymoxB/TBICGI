@@ -4,7 +4,7 @@ report 60512 LaporanOutstandingTO
     Caption = 'Laporan Outstanding TO';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/LaporanOutstandingTO.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60512_OutsTO.rdl';
 
     dataset
     {

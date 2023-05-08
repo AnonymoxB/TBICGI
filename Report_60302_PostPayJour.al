@@ -5,7 +5,7 @@ report 60302 PostedPaymentJournal
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PostedPaymentJournal.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60302_PostPayJour.rdl';
 
     dataset
     {

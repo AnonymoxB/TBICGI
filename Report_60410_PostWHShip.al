@@ -4,7 +4,7 @@ report 60410 PostedWarehouseShipment
     Caption = 'Posted Warehouse Shipment';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PostedWarehouseShipment.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60410_PostWHShip.rdl';
 
     dataset
     {

@@ -4,7 +4,7 @@ report 60405 PenerimaanBarang
     Caption = 'Penerimaan Barang';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PenerimaanBarang.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60405_PenerimaanBarang.rdl';
 
     dataset
     {

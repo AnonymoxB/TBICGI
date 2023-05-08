@@ -4,7 +4,7 @@ report 60301 PermintaanPembayaran
     Caption = 'Permintaan Pembayaran';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PermintaanPembayaran.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60301_PP.rdl';
 
     dataset
     {

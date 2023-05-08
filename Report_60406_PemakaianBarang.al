@@ -5,7 +5,7 @@ report 60406 PemakaianBarang
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PemakaianBarang.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60406_PemakaianBarang.rdl';
 
     dataset
     {

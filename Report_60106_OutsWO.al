@@ -4,7 +4,7 @@ report 60106 OutstandingWO
     Caption = 'Outstanding WO';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/OutstandingWO.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60106_OutsWO.rdl';
 
     dataset
     {

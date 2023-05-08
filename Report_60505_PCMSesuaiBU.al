@@ -5,7 +5,7 @@ report 60505 PCMSesuaiBisnisUnit
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PCMSesuaiBisnisUnit.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60505_PCMSesuaiBU.rdl';
 
     dataset
     {

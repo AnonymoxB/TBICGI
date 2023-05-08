@@ -4,7 +4,7 @@ report 60514 PriceVariantPO
     Caption = 'Price Variant PO Report';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PriceVariantPO.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60514_PriceVarPO.rdl';
 
     dataset
     {

@@ -1,61 +1,58 @@
-report 60402 LaporanTurnover
+report 60104 LaporanRealisasiMaintenance
 {
     UsageCategory = ReportsAndAnalysis;
-    Caption = 'Laporan Turnover';
+    Caption = 'Laporan Realisasi Maintenance';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/LaporanTurnover.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60104_RealisasiMaintenance.rdl';
 
     dataset
     {
-        dataitem("Item Ledger Entry"; "Item Ledger Entry")
+        dataitem("DAM Work Order Ledger Entry"; "DAM Work Order Ledger Entry")
         {
             column(Posting_Date; "Posting Date")
-            {
-            }
-            column(Entry_Type; "Entry Type")
             { }
-            column(Document_Type; "Document Type")
+            column(Asset_No_; "Asset No.")
             { }
-            column(Document_No_; "Document No.")
+            column(Work_Order_No_; "Work Order No.")
             { }
-            column(Item_No_; "Item No.")
+            column(Plan_No_; "Plan No.")
+            { }
+            column(Type; Type)
+            { }
+            column(No_; "No.")
             { }
             column(Description; Description)
             { }
-            column(Global_Dimension_1_Code; "Global Dimension 1 Code")
+            column(Quantity; Quantity)
             { }
-            column(Global_Dimension_2_Code; "Global Dimension 2 Code")
+            column(Unit_of_Measure_Code; "Unit of Measure Code")
             { }
             column(Location_Code; "Location Code")
             { }
-            column(Quantity; Quantity)
+            column(Work_Type_Code; "Work Type Code")
             { }
-            column(Invoiced_Quantity; "Invoiced Quantity")
+            column(Serial_No_; "Serial No.")
             { }
-            column(Remaining_Quantity; "Remaining Quantity")
+            column(Lot_No_; "Lot No.")
             { }
-            column(Sales_Amount__Actual_; "Sales Amount (Actual)")
+            column(Vendor_No_; "Vendor No.")
             { }
-            column(Cost_Amount__Actual_; "Cost Amount (Actual)")
+            column(Expected_Unit_Cost__LCY_; "Expected Unit Cost (LCY)")
             { }
-            column(Cost_Amount__Non_Invtbl__; "Cost Amount (Non-Invtbl.)")
+            column(Expected_Line_Cost__LCY_; "Expected Line Cost (LCY)")
             { }
-            column(Open; Open)
+            column(Expense_Open; "Expense Open")
             { }
-            column(Order_Type; "Order Type")
+            column(Actual_Line_Cost__LCY_; "Actual Line Cost (LCY)")
             { }
             column(Entry_No_; "Entry No.")
             { }
-            column(Document_Date; "Document Date")
+            column(Direct_FA_Cost; "Direct FA Cost")
             { }
-            column(Document_Line_No_; "Document Line No.")
+            column(Skills; Skills)
             { }
-            column(Country_Region_Code; "Country/Region Code")
-            { }
-            column("Area"; "Area")
-            { }
-            column(Lot_No_; "Lot No.")
+            column(Missing_Skills; "Missing Skills")
             { }
             column(CompanyPic; CompanyInfo.Picture)
             { }

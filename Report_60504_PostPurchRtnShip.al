@@ -5,7 +5,7 @@ report 60504 PostedPurchaseReturnShipment
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PostedPurchaseReturnShipment.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60504_PostPurchRtnShip.rdl';
 
     dataset
     {

@@ -1,57 +1,53 @@
-report 60202 OrderConsume
+report 60203 OrderOutput
 {
     UsageCategory = ReportsAndAnalysis;
-    Caption = 'Order Consume';
+    Caption = 'Order Output';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-
-    RDLCLayout = './Rdlc/OrderConsume.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60203_OrderOutput.rdl';
 
     dataset
     {
         dataitem("Invt. Document Header"; "Invt. Document Header")
         {
-            column(No_; "No.")
+            column(Document_Type; "Document Type")
             {
             }
-            column(Posting_Description; "Posting Description")
+            column(No_; "No.")
             { }
-            column(Document_Type; "Document Type")
+            column(Posting_Description; "Posting Description")
             { }
             column(Document_Date; "Document Date")
             { }
             column(Posting_Date; "Posting Date")
             { }
-            column(Location_Code; "Location Code")
-            { }
             column(Gen__Bus__Posting_Group; "Gen. Bus. Posting Group")
-            { }
-            column(Shortcut_Dimension_1_Code; "Shortcut Dimension 1 Code")
-            { }
-            column(Shortcut_Dimension_2_Code; "Shortcut Dimension 2 Code")
-            { }
-            column(External_Document_No_; "External Document No.")
             { }
             column(Salesperson_Purchaser_Code; "Salesperson/Purchaser Code")
             { }
-            column(Correction; Correction)
+            column(External_Document_No_; "External Document No.")
             { }
-            column(Status; Status)
+            column(Correction; Correction)
             { }
             column(No__Series; "No. Series")
             { }
             column(Posting_No__Series; "Posting No. Series")
             { }
+            column(Shortcut_Dimension_1_Code; "Shortcut Dimension 1 Code")
+            { }
+            column(Shortcut_Dimension_2_Code; "Shortcut Dimension 2 Code")
+            { }
             column(Dimension_Set_ID; "Dimension Set ID")
+            { }
+            column(Location_Code; "Location Code")
+            { }
+            column(Status; Status)
             { }
             column(CompanyPic; CompanyInfo.Picture)
             { }
             dataitem("Invt. Document Line"; "Invt. Document Line")
             {
                 DataItemLink = "Document No." = field("No.");
-
-                column(Document_No_; "Document No.")
-                { }
                 column(Line_No_; "Line No.")
                 { }
                 column(Item_No_; "Item No.")
@@ -60,25 +56,31 @@ report 60202 OrderConsume
                 { }
                 column(Quantity; Quantity)
                 { }
-                column(Unit_of_Measure_Code; "Unit of Measure Code")
+                column(Unit_Amount; "Unit Amount")
+                { }
+                column(Indirect_Cost__; "Indirect Cost %")
                 { }
                 column(Unit_Cost; "Unit Cost")
                 { }
-                column(Unit_Amount; "Unit Amount")
-                { }
                 column(Amount; Amount)
+                { }
+                column(Unit_of_Measure_Code; "Unit of Measure Code")
                 { }
                 column(Inventory_Posting_Group; "Inventory Posting Group")
                 { }
-                column(Gen__Prod__Posting_Group; "Gen. Prod. Posting Group")
+                column(Applies_to_Entry; "Applies-to Entry")
                 { }
                 column(Qty__per_Unit_of_Measure; "Qty. per Unit of Measure")
                 { }
-                column(Qty__Rounding_Precision; "Qty. Rounding Precision")
+                column(Gen__Prod__Posting_Group; "Gen. Prod. Posting Group")
                 { }
-                column(Quantity__Base_; "Quantity (Base)")
+                column(Variant_Code; "Variant Code")
                 { }
-                column(Purchasing_Code; "Purchasing Code")
+                column(Gross_Weight; "Gross Weight")
+                { }
+                column(Net_Weight; "Net Weight")
+                { }
+                column(Units_per_Parcel; "Units per Parcel")
                 { }
             }
         }

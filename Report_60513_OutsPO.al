@@ -5,7 +5,7 @@ report 60513 LaporanOutstandingPO
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/LaporanOutstandingPO.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60513_OutsPO.rdl';
 
 
     dataset

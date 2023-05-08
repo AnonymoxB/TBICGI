@@ -5,7 +5,7 @@ report 60510 LaporanPembelianDetail
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/LaporanPembelianDetail.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60510_PembelianDetail.rdl';
 
     dataset
     {

@@ -4,7 +4,7 @@ report 60506 PrepaymentPurchase
     Caption = 'Prepayment Purchase';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PrepaymentPurchase.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60506_FormPurchPrep.rdl';
 
     dataset
     {
