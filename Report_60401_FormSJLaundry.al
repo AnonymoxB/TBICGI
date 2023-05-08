@@ -4,7 +4,7 @@ report 60401 SuratJalanLaundry
     Caption = 'Surat Jalan Laundry';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/SuratJalanLaundry.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60401_FormSJLaundry.rdl';
 
     dataset
     {

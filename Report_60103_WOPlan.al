@@ -4,7 +4,7 @@ report 60103 WorkOrderPlan
     Caption = 'Work Order Plan';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/WorkOrderPlan.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60103_WorkOrderPlan.rdl';
 
     dataset
     {

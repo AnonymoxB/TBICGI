@@ -4,7 +4,7 @@ report 60502 PurchaseInvoice
     Caption = 'Purchase Invoice';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PurchaseInvoice.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60502_PurchInvoice.rdl';
 
     dataset
     {

@@ -4,7 +4,7 @@ report 60201 SPK
     Caption = 'SPK';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/SPK.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60201_FormSPK.rdl';
 
     dataset
     {

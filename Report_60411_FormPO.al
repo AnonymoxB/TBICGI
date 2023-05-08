@@ -5,7 +5,7 @@ report 60411 PurchaseOrderForm
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PurchaseOrderForm.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60411_FormPO.rdl';
 
     dataset
     {
@@ -63,52 +63,29 @@ report 60411 PurchaseOrderForm
             {
                 DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
 
-                column(Type; Type)
-                { }
-                column(No_Item; "No.")
-                { }
-                column(Document_No_; "Document No.")
-                { }
-                column(Description; Description)
-                { }
-                column(Location_Code; "Location Code")
-                { }
-                column(Bin_Code; "Bin Code")
-                { }
-                column(Quantity; Quantity)
-                { }
-                column(Outstanding_Quantity; "Outstanding Quantity")
-                { }
-                column(Quantity_Received; "Quantity Received")
-                { }
-                column(Quantity_Invoiced; "Quantity Invoiced")
-                { }
-                column(Qty__to_Invoice; "Qty. to Invoice")
-                { }
-                column(Qty__to_Receive; "Qty. to Receive")
-                { }
-                column(Unit_of_Measure_Code; "Unit of Measure Code")
-                { }
-                column(Unit_Price__LCY_; "Unit Price (LCY)")
-                { }
-                column(Direct_Unit_Cost; "Direct Unit Cost")
-                { }
-                column(Amount; Amount)
-                { }
-                column(VAT__; "VAT %")
-                { }
-                column(Line_Discount__; "Line Discount %")
-                { }
-                column(Line_Discount_Amount; "Line Discount Amount")
-                { }
-                column(Inv__Disc__Amount_to_Invoice; "Inv. Disc. Amount to Invoice")
-                { }
-                column(Inv__Discount_Amount; "Inv. Discount Amount")
-                { }
-                column(Expected_Receipt_Date; "Expected Receipt Date")
-                { }
-                column(Planned_Receipt_Date; "Planned Receipt Date")
-                { }
+                column(Type; Type) { }
+                column(No_Item; "No.") { }
+                column(Document_No_; "Document No.") { }
+                column(Description; Description) { }
+                column(Location_Code; "Location Code") { }
+                column(Bin_Code; "Bin Code") { }
+                column(Quantity; Quantity) { }
+                column(Outstanding_Quantity; "Outstanding Quantity") { }
+                column(Quantity_Received; "Quantity Received") { }
+                column(Quantity_Invoiced; "Quantity Invoiced") { }
+                column(Qty__to_Invoice; "Qty. to Invoice") { }
+                column(Qty__to_Receive; "Qty. to Receive") { }
+                column(Unit_of_Measure_Code; "Unit of Measure Code") { }
+                column(Unit_Price__LCY_; "Unit Price (LCY)") { }
+                column(Direct_Unit_Cost; "Direct Unit Cost") { }
+                column(Amount; Amount) { }
+                column(VAT__; "VAT %") { }
+                column(Line_Discount__; "Line Discount %") { }
+                column(Line_Discount_Amount; "Line Discount Amount") { }
+                column(Inv__Disc__Amount_to_Invoice; "Inv. Disc. Amount to Invoice") { }
+                column(Inv__Discount_Amount; "Inv. Discount Amount") { }
+                column(Expected_Receipt_Date; "Expected Receipt Date") { }
+                column(Planned_Receipt_Date; "Planned Receipt Date") { }
 
                 dataitem("Purch. Comment Line"; "Purch. Comment Line")
                 {

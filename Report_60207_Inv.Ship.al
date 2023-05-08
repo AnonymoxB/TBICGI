@@ -5,7 +5,7 @@ report 60207 InventoryShipment
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/InventoryShipment.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60207_Inv.Ship.rdl';
 
     dataset
     {

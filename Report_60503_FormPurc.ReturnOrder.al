@@ -5,7 +5,7 @@ report 60503 PurchaseReturnOrder
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PurchaseReturnOrder.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60503_FormPurc.ReturnOrder.rdl';
 
     dataset
     {
@@ -71,5 +71,4 @@ report 60503 PurchaseReturnOrder
 
     var
         CompanyInfo: Record "Company Information";
-
 }

@@ -4,7 +4,7 @@ report 60204 RekapPermintaanHasilProduksi
     Caption = 'Rekap Permintaan Hasil Produksi';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/RekapPermintaanHasilProduksi.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60204_RkpPermintaanHasilProduksi.rdl';
 
     dataset
     {

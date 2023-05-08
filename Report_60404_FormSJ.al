@@ -5,7 +5,7 @@ report 60404 SuratJalan
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/SuratJalan.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60404_FormSJ.rdl';
 
     dataset
     {

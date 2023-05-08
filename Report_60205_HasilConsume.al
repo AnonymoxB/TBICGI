@@ -4,16 +4,14 @@ report 60205 HasilConsume
     Caption = 'Hasil Consume';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/HasilConsume.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60205_HasilConsume.rdl';
 
     dataset
     {
         dataitem("Invt. Shipment Header"; "Invt. Shipment Header")
         {
-            column(No_; "No.")
-            { }
-            column(Posting_Description; "Posting Description")
-            { }
+            column(No_; "No.") { }
+            column(Posting_Description; "Posting Description") { }
             column(Document_Date; "Document Date")
             { }
             column(Posting_Date; "Posting Date")
@@ -95,32 +93,19 @@ report 60205 HasilConsume
                 { }
                 column(Gen__Prod__Posting_Group; "Gen. Prod. Posting Group")
                 { }
-                column(Unit_Cost__ACY_; "Unit Cost (ACY)")
-                { }
-                column(Variant_Code; "Variant Code")
-                { }
-                column(Bin_Code; "Bin Code")
-                { }
-                column(Qty__per_Unit_of_Measure; "Qty. per Unit of Measure")
-                { }
-                column(Qty__Rounding_Precision; "Qty. Rounding Precision")
-                { }
-                column(Qty__Rounding_Precision__Base_; "Qty. Rounding Precision (Base)")
-                { }
-                column(Quantity__Base_; "Quantity (Base)")
-                { }
-                column(Item_Category_Code; "Item Category Code")
-                { }
-                column(Purchasing_Code; "Purchasing Code")
-                { }
-                column(FA_No_; "FA No.")
-                { }
-                column(FA_Entry_No_; "FA Entry No.")
-                { }
-                column(Applies_from_Entry; "Applies-from Entry")
-                { }
-                column(Applies_to_Value_Entry; "Applies-to Value Entry")
-                { }
+                column(Unit_Cost__ACY_; "Unit Cost (ACY)") { }
+                column(Variant_Code; "Variant Code") { }
+                column(Bin_Code; "Bin Code") { }
+                column(Qty__per_Unit_of_Measure; "Qty. per Unit of Measure") { }
+                column(Qty__Rounding_Precision; "Qty. Rounding Precision") { }
+                column(Qty__Rounding_Precision__Base_; "Qty. Rounding Precision (Base)") { }
+                column(Quantity__Base_; "Quantity (Base)") { }
+                column(Item_Category_Code; "Item Category Code") { }
+                column(Purchasing_Code; "Purchasing Code") { }
+                column(FA_No_; "FA No.") { }
+                column(FA_Entry_No_; "FA Entry No.") { }
+                column(Applies_from_Entry; "Applies-from Entry") { }
+                column(Applies_to_Value_Entry; "Applies-to Value Entry") { }
             }
         }
     }
@@ -128,33 +113,13 @@ report 60205 HasilConsume
     requestpage
     {
         SaveValues = true;
-        layout
-        {
-            area(Content)
-            {
-            }
-        }
-
-        actions
-        {
-            area(processing)
-            {
-                action(ActionName)
-                {
-                    ApplicationArea = All;
-
-                }
-            }
-        }
-
     }
     trigger OnInitReport()
     begin
         CompanyInfo.get();
-        CompanyInfo.CALCFIELDS(Picture);
+        CompanyInfo.CalcFields(Picture);
     end;
 
     var
         CompanyInfo: Record "Company Information";
-
 }

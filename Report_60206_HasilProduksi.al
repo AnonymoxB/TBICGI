@@ -4,8 +4,8 @@ report 60206 HasilProduksi
     Caption = 'Hasil Produksi';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/HasilProduksi.rdl';
-    // tes comment
+    RDLCLayout = './Rdlc/Rdlc_60206_HasilProduksi.rdl';
+
     dataset
     {
         dataitem("Invt. Receipt Header"; "Invt. Receipt Header")

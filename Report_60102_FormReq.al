@@ -4,7 +4,7 @@ report 60102 Request
     Caption = 'Request';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/Request.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60102_FormReq.rdl';
 
     dataset
     {

@@ -4,7 +4,7 @@ report 60105 RealisasiPengerjaanEnginering
     Caption = 'Realisasi Pengerjaan Enginering';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/RealisasiPengerjaanEnginering.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60105_RealKerjaEnginering.rdl';
 
     dataset
     {

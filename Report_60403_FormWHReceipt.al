@@ -1,16 +1,16 @@
-report 60509 PurchaseReceipt
+report 60403 WarehouseReceipt
 {
     UsageCategory = ReportsAndAnalysis;
-    Caption = 'Daily Receipt Report';
+    Caption = 'Warehouse Receipt';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/PurchaseReceipt.rdl';
+
+    RDLCLayout = './Rdlc/Rdlc_60403_WarehouseReceipt.rdl';
 
     dataset
     {
         dataitem("Purch. Rcpt. Header"; "Purch. Rcpt. Header")
         {
-            RequestFilterFields = "Buy-from Vendor No.", "Order Date", "Location Code";
             column(Buy_from_Vendor_No_; "Buy-from Vendor No.") { }
             column(Buy_from_Contact; "Buy-from Contact") { }
             column(Buy_from_Contact_No_; "Buy-from Contact No.") { }
@@ -52,11 +52,10 @@ report 60509 PurchaseReceipt
             column(Vendor_Posting_Group; "Vendor Posting Group") { }
             column(Shipment_Method_Code; "Shipment Method Code") { }
             column(Payment_Discount__; "Payment Discount %") { }
-            column(Jml; TotalHarga) { }
             column(CompanyPic; CompanyInfo.Picture) { }
             dataitem("Purch. Rcpt. Line"; "Purch. Rcpt. Line")
             {
-                DataItemLink = "Document No." = field("No.");
+                DataItemLink = "Buy-from Vendor No." = field("Buy-from Vendor No.");
                 column(Document_No_; "Document No.") { }
                 column(No_; "No.") { }
                 column(Line_No_; "Line No.") { }
@@ -75,11 +74,6 @@ report 60509 PurchaseReceipt
                 column(Currency_Code; "Currency Code") { }
                 column(Shortcut_Dimension_1_Code; "Shortcut Dimension 1 Code") { }
                 column(Shortcut_Dimension_2_Code; "Shortcut Dimension 2 Code") { }
-
-                trigger OnAfterGetRecord()
-                begin
-                    TotalHarga := Quantity * "Direct Unit Cost";
-                end;
             }
         }
     }
@@ -89,7 +83,7 @@ report 60509 PurchaseReceipt
         SaveValues = true;
     }
 
-    trigger OnInitReport()
+    trigger OnInitReport();
     begin
         CompanyInfo.Get();
         CompanyInfo.CalcFields(Picture);
@@ -97,5 +91,4 @@ report 60509 PurchaseReceipt
 
     var
         CompanyInfo: Record "Company Information";
-        TotalHarga: Decimal;
 }

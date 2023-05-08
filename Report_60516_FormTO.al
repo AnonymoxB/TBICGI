@@ -4,7 +4,7 @@ report 60516 TransferOrderForm
     Caption = 'Transfer Order Form';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/TransferOrderForm.rdl';
+    RDLCLayout = './Rdlc/Rdlc_605016_FormTO.rdl';
     dataset
     {
         dataitem("Transfer Header"; "Transfer Header")

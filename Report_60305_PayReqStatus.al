@@ -5,7 +5,7 @@ report 60305 PaymentRequestStatus
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/PaymentRequestStatus.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60305_PayReqStatus.rdl';
 
     dataset
     {
