@@ -4,7 +4,7 @@ report 60515 GoodReceiveDetail
     Caption = 'Good Receive Form';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/GoodReceiveDetail.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60515_GRDetail.rdl';
 
     dataset
     {

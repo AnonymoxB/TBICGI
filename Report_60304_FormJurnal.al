@@ -4,7 +4,7 @@ report 60304 FormJurnalAcc
     Caption = 'Journal Form';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Rdlc/FormJurnal.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60304_FormJurnal.rdl';
 
     dataset
     {

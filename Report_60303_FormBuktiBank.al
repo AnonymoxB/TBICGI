@@ -5,7 +5,7 @@ report 60303 BuktiBankKeluarMasuk
     ApplicationArea = All;
     DefaultLayout = RDLC;
 
-    RDLCLayout = './Rdlc/BuktiBankKeluarMasuk.rdl';
+    RDLCLayout = './Rdlc/Rdlc_60303_FormBuktiBank.rdl';
 
     dataset
     {
