@@ -2,7 +2,7 @@ pageextension 60101 "WorkOrder" extends "DAM Work Order"
 {
     layout
     {
-        // Add changes to page layout here
+        // Add changes to page layout here yaaaa
     }
 
     actions
