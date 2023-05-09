@@ -4,7 +4,7 @@ report 60508 PostedTransferReceipt
     Caption = 'Posted Transfer Receipt';
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    //tes1 123456789
+    //tes1 12345678
     RDLCLayout = './Rdlc/Rdlc_60508_PostTFReceipt.rdl';
 
     dataset
